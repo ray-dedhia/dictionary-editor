@@ -111,7 +111,7 @@ public class DictionaryEditor extends JFrame {
 
 	/** Adds default part of speech tags and generates the JFrame and its contents. */
 	public DictionaryEditor() {
-		addPOSTags("/home/rheadedhia/Documents/pos2.txt", true, true);
+		//addPOSTags("/home/Documents/pos2.txt", true, true); Use this format to link a list of pos tags
 		setSize(700, 800);
 
 		createMenuBar();
@@ -127,9 +127,9 @@ public class DictionaryEditor extends JFrame {
 	@SuppressWarnings("serial")
 	public void createMenuBar() {
 		JMenuBar menuBar = new JMenuBar();
-		ImageIcon openIcon = new ImageIcon("/home/rheadedhia/workspace/jp/src/images/open.gif");
-		ImageIcon saveIcon = new ImageIcon("/home/rheadedhia/workspace/jp/src/images/save.gif");
-		ImageIcon saveAsIcon = new ImageIcon("/home/rheadedhia/workspace/jp/src/images/saveas.gif");
+		ImageIcon openIcon = new ImageIcon("open.gif");
+		ImageIcon saveIcon = new ImageIcon("save.gif");
+		ImageIcon saveAsIcon = new ImageIcon("saveas.gif");
 		final DictionaryEditor DE = this;
 
 		JMenu file = new JMenu("File");
@@ -703,7 +703,7 @@ public class DictionaryEditor extends JFrame {
 	}
 
 	private boolean validateXMLSchema(String xmlPath) {
-		String xsdPath = "/home/rheadedhia/schema.xsd"; // xml validation schema file
+		String xsdPath = "schema.xsd"; // xml validation schema file
 		try {
 			SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
 			Schema schema = factory.newSchema(new File(xsdPath));
