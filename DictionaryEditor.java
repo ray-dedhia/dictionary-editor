@@ -623,7 +623,7 @@ public class DictionaryEditor extends JFrame {
 
 	/** Opens XML files that are formatted the way the method saveDictEntries formats the XML files that it saves */
 	public void openXML(String filename, File file) {
-		if (validateXMLSchema(filename)) {
+		//if (validateXMLSchema(filename)) {
 			try {
 				List<String> fileWords = new ArrayList<>();
 				String word = "";
@@ -699,10 +699,10 @@ public class DictionaryEditor extends JFrame {
 			} catch (XMLStreamException e) {
 				e.printStackTrace();
 			}
-		}
+		//}
 	}
 
-	private boolean validateXMLSchema(String xmlPath) {
+	/*private boolean validateXMLSchema(String xmlPath) {
 		String xsdPath = "schema.xsd"; // xml validation schema file
 		try {
 			SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
@@ -716,7 +716,7 @@ public class DictionaryEditor extends JFrame {
 		}
 		System.out.println("valid xml file");
 		return true;
-	}
+	}*/
 
 	/**
 	 * Adds the words in the file to the list of words to search for in the given resources and calls updateWordPanel, 
