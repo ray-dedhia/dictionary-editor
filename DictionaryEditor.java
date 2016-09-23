@@ -117,19 +117,6 @@ public class DictionaryEditor extends JFrame {
 		createMenuBar();
 		createContent();
 
-		// FIGURE OUT HOW TO RESIZE WIDTH ONLY (LEAVE HEIGHTS ALONE) ON RESIZING JFRAME LATER (AND PUT EVERYTHING IN JSCROLLPANE SO THAT YOU CAN
-		// SCROLL DOWN IF WIDTH DECREASED)
-		// ONE OPTION: MAKE ALL COMPONENTS GLOBAL VARIABLES (or even just available in here) & RESIZE THEM EVERY TIME THE JFRAME IS RESIZED
-		// Can put them in hash map & map them to their preferred dimensions and loop through the hash map to make code short
-		// this.getRootPane().addComponentListener(new ComponentAdapter() {
-		// public void componentResized(ComponentEvent e) {
-		// This is only called when the user releases the mouse button.
-		// revalidate();
-		// vertical.setPreferredSize(new Dimension((int)(getWidth()*.65), getHeight()-55));
-		// System.out.println("componentResized");
-		// }
-		// });
-
 		setLocationRelativeTo(null);
 		setVisible(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
